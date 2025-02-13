@@ -58,7 +58,6 @@ class Math {
 
     public double meth2() {
         if (a == b) {
-            System.out.println("Can't divide by 0");
             return Double.NaN;
         }
         else {
@@ -71,13 +70,11 @@ class Math {
         double n = (double) (a * x) / b;
 
         if (b == 0) {
-            System.out.println("Can't divide by 0");
             return Double.NaN;
         }
 
        else {
             if (n < 0){
-                System.out.println("Factorial of a negative number is not defined.");
                 return Double.NaN;
             }
 
@@ -86,10 +83,12 @@ class Math {
             }
 
             for (int i = 1; i <= n; i++) {
+
                 result *= i;
             }
+            return result;
         }
 
-        return result;
+
     }
 }
